@@ -1,0 +1,131 @@
+/* ===========================
+   Base Styles
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ===========================
+   Navigation (Flexbox)
+=========================== */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  background: #444;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.navbar a:hover {
+  background: #666;
+  border-radius: 4px;
+}
+
+/* ===========================
+   Grid Layout for Main
+=========================== */
+/* Grid Layout for Main */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;  /* sidebar first, then content */
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Sidebar should come first visually */
+.sidebar {
+  grid-column: 1; /* left column */
+}
+
+.content {
+  grid-column: 2; /* right column */
+}
+
+
+/* Content */
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-left: 2px solid #ddd;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 992px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 2px solid #ddd;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
